@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+@import '_constants';
+@import '_mixins';
+@import '_base';
+@import '_first-screen';
+@import '_settings';
+@import '_artists';
+@import '_question-artist';
+@import '_question-pic';
+@import '_modals';
+@import '_score';
+
+html {
+  font-size: 10px;
+}
+
+body {
+  background: $black-color;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+}
+
+.wrapper {
+  max-width: 1480px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.hide {
+  display: none;
+}

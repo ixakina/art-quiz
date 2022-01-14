@@ -1,0 +1,242 @@
+.settings {
+  z-index: 1;
+  background: $black-color;
+  visibility: visible;
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 20px;
+  height: 100%;
+  width: 100%;
+  transition: all 0.5s;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  &_button {
+    width: 287px;
+
+    @media (max-width: 768px) {
+      width: 160px;
+    }
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+
+    @media (max-width: 768px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    flex: 1 1 auto;
+
+    @media (max-width: 768px) {
+      gap: 30px;
+    }
+
+    @media (max-width: 520px) {
+      align-items: center;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    @media (max-width: 768px) {
+      gap: 15px;
+    }
+
+    @media (max-width: 520px) {
+      width: 100%;
+      align-items: center;
+    }
+  }
+
+  &__volume {
+  }
+
+  &__subtitle {
+    @include font($size: 3.4rem, $weight: 700);
+
+    @media (max-width: 768px) {
+      @include font($size: 2.4rem, $weight: 700);
+    }
+  }
+
+  &__time {
+  }
+
+  &__time-step {
+  }
+
+  &__buttons {
+    flex-direction: row;
+    align-self: flex-end;
+
+    @media (max-width: 768px) {
+      align-self: flex-start;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 520px) {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+}
+
+.settings.close {
+  visibility: hidden;
+  opacity: 1;
+  left: -100%;
+}
+
+.header {
+  &__title {
+    @include font($size: 2.2rem);
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+
+    &:before {
+      content: '';
+      width: 36px;
+      height: 36px;
+      background: url('../../icons/settings/settings-header-arrow.svg') center /
+        auto no-repeat;
+    }
+  }
+
+  &__btn-close {
+    width: 36px;
+    height: 36px;
+    background: url('../../icons/settings/settings-btn-close.svg') center / auto
+      no-repeat;
+  }
+}
+
+.progress-volume {
+  width: 40%;
+  // background: linear-gradient(
+  //   to right,
+  //   #ffbca2 0%,
+  //   #ffbca2 40%,
+  //   #c4c4c4 40%,
+  //   #c4c4c4 100%
+  // );
+  height: 3px;
+  border-radius: 4.5px;
+
+  outline: none;
+  transition: background 450ms ease-in;
+  -webkit-appearance: none;
+
+  &::-webkit-slider-thumb {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    -webkit-appearance: none;
+    cursor: ew-resize;
+    background: #ffffff;
+  }
+
+  @media (max-width: 520px) {
+    width: 100%;
+  }
+}
+
+.volume-icons {
+  display: inline-block;
+  height: 36px;
+  width: 40%;
+  background: url('../../icons/settings/value-off.svg') 0 0 / auto no-repeat,
+    url('../../icons/settings/value-on.svg') 100% 0 / auto no-repeat;
+
+  @media (max-width: 520px) {
+    width: 100%;
+  }
+}
+
+.toggle-time {
+  display: flex;
+  gap: 20px;
+  &__label {
+    @include font($size: 2.4rem);
+  }
+
+  &__button {
+    width: 48px;
+    height: 24px;
+    border-radius: 1000px;
+    display: flex;
+    align-items: center;
+    padding: 0 3px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    background: grey;
+    transform: rotate(0deg);
+  }
+
+  &__button.on {
+    background: $pink-color;
+    transform: rotate(-180deg);
+  }
+
+  &__pointer {
+    background: $light-color;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.time-step {
+  &__wrapper {
+    display: flex;
+    align-items: center;
+
+    button {
+      height: 36px;
+      width: 36px;
+      border-radius: 50%;
+      background: $light-color;
+      @include font($size: 3rem, $color: $black-color, $weight: 600);
+      transition: all 0.3s ease-in-out;
+
+      &:hover,
+      &:active {
+        background: $pink-color;
+      }
+    }
+  }
+}
+
+.number {
+  background: transparent;
+  text-align: center;
+  @include font($size: 2.4rem, $weight: 600);
+
+  @media (max-width: 768px) {
+    @include font($size: 2rem, $weight: 700);
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}

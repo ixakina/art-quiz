@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet"> -->
+    <link rel="stylesheet" href="assets/styles/css/clear-style.css">
+    <link rel="stylesheet" href="assets/styles/css/style.css">
+    <title>Art-quiz</title>
+</head>
+<body>
+    <div class='first-screen section'>
+        <div class="wrapper first-screen__wrapper">
+            <div class="first-screen__header">
+                <button class="settings-icon"></button>
+            </div>
+            <div class="first-screen__buttons">
+                <div class="battons__wrapper">
+                    <button class="button first-screen_button artist-quize-btn">Художники</button>
+                    <button class="button first-screen_button picture-quize-btn">Картины</button>
+                </div>
+
+            </div>
+            <div class="footer">
+                <a href="https://rs.school/js/" class="footer__rs-link"></a>
+                <a href="https://github.com/ixakina" class="footer__git-link">Maria Khaikina 2021</a>
+            </div>
+        </div>
+ 
+    </div>
+    <div class="settings close">
+        <div class="wrapper settings__wrapper">
+            <div class="settings__header">
+                <span class="header__title">Настройки</span>
+                <button class="header__btn-close"></button>
+            </div>
+            <div class="settings__main">
+                <div class="settings__volume settings__item">
+                    <h3 class="settings__subtitle">Звук</h3>
+                    <input type="range" value="" min="0" max="1" step="0.1" class="progress-volume" name="volume">
+                    <span class="volume-icons"></span>
+                </div>
+                <div class="settings__time settings__item">
+                    <h3 class="settings__subtitle">Таймер</h3>
+                    <div class="toggle-time">
+                        <span class="toggle-time__label">Выкл.</span>
+                        <div class="toggle-time__button">
+                            <div class="toggle-time__pointer"></div>
+                        </div>
+                        <span class="toggle-time__label">Вкл.</span>
+                    </div>
+                </div>
+                <div class="settings__time-step settings__item">
+                    <h3 class="settings__subtitle">Время на ответ</h3>
+                    <div class="time-step__wrapper">
+                        <button type="button" onclick="this.nextElementSibling.stepDown()">–</button>
+                        <input type="number" min="5" max="30" value="5"  step="5" class="number" />
+                        <button type="button" onclick="this.previousElementSibling.stepUp()">+</button>
+                    </div>
+
+
+                </div>
+                <div class="settings__buttons settings__item">
+                    <button class="button settings_button default">По умолчанию</button>
+                    <button class="button settings_button save">Сохранить</button>
+                </div>
+            </div>
+            <div class="footer">
+                <a href="https://rs.school/js/" class="footer__rs-link"></a>
+                <a href="https://github.com/ixakina" class="footer__git-link">Maria Khaikina 2021</a>
+            </div>
+        </div>
+    </div>   
+    <div class="artists section hide">
+        <div class="wrapper artists__wrapper">
+            <div class="artists__header">
+                <div class="logo-small"></div>
+                <div class="header__btns">
+                    <button class="header__btn btn_home">Главная</button>
+                    <button class="header__btn btn_category btn-active">Категории</button>                    
+                </div>
+                <button class="settings-icon"></button>
+            </div>
+            <div class="artists__main">
+                <div class="cards-wrapper"></div>
+            </div>
+            <div class="footer">
+                <a href="https://rs.school/js/" class="footer__rs-link"></a>
+                <a href="https://github.com/ixakina" class="footer__git-link">Maria Khaikina 2021</a>
+            </div>
+        </div>
+    </div>
+    <div class="question-card question-artist section hide">
+        <div class="wrapper question-card__wrapper question-artist__wrapper">
+            <div class="question-card__header">
+                <button class="question-card__close-btn close-btn"></button>
+            </div>
+            <div class="question-card__main question-artist__main">
+                <div class="question-card__question">
+                    <span class="question__text">Кто автор этой картины?</span>
+                    <span class="question__time"></span>
+                </div>
+                <div class="question-card__pic">
+                    <img src="" alt="">
+                </div>
+                <div class="question-artist__pagination">
+                    <div class="pagination__dot"></div>
+                    <div class="pagination__dot"></div>
+                    <div class="pagination__dot"></div>
+                    <div class="pagination__dot"></div>
+                    <div class="pagination__dot"></div>
+                    <div class="pagination__dot"></div>
+                    <div class="pagination__dot"></div>
+                    <div class="pagination__dot"></div>
+                    <div class="pagination__dot"></div>
+                    <div class="pagination__dot"></div>
+                </div>
+                <div class="question-artist__answers">
+                    <button class="button answers__button"></button>
+                    <button class="button answers__button"></button>
+                    <button class="button answers__button"></button>
+                    <button class="button answers__button"></button>
+                </div>
+            </div>
+            <div class="footer">
+                <a href="https://rs.school/js/" class="footer__rs-link"></a>
+                <a href="https://github.com/ixakina" class="footer__git-link">Maria Khaikina 2021</a>
+            </div>
+        </div>
+    </div>
+    <div class="question-card question-pic section hide">
+        <div class="wrapper question-card__wrapper question-pic__wrapper">
+            <div class="question-card__header">
+                <button class="question-card__close-btn close-btn"></button>
+            </div>
+            <div class="question-card__main question-pic__main">
+                <div class="question-card__question">
+                    <span class="question__text">Автором какой картины является ?</span>
+                    <span class="question__time"></span>
+                </div>
+                <div class="question-pic__pictures">
+                    <div class="pictures__wrapper">
+                        <div class="pictures__item">
+                            <img src="" alt="">
+                        </div>
+                        <div class="pictures__item">
+                            <img src="" alt="">
+                        </div>
+                        <div class="pictures__item">
+                            <img src="" alt="">
+                        </div>
+                        <div class="pictures__item">
+                            <img src="" alt="">
+                        </div>                
+                    </div>
+    
+                </div>
+                <div class="question-artist__pagination">
+                    <div class="pagination__dot"></div>
+                    <div class="pagination__dot"></div>
+                    <div class="pagination__dot"></div>
+                    <div class="pagination__dot"></div>
+                    <div class="pagination__dot"></div>
+                    <div class="pagination__dot"></div>
+                    <div class="pagination__dot"></div>
+                    <div class="pagination__dot"></div>
+                    <div class="pagination__dot"></div>
+                    <div class="pagination__dot"></div>
+                </div>
+            </div>
+
+            <div class="footer">
+                <a href="https://rs.school/js/" class="footer__rs-link"></a>
+                <a href="https://github.com/ixakina" class="footer__git-link">Maria Khaikina 2021</a>
+            </div>
+        </div>
+    </div>
+    <div class="score section hide">
+        <div class="wrapper score__wrapper">
+            <div class="score__header">
+                <div class="logo-small"></div>
+                <div class="header__btns">
+                    <button class="header__btn btn_home">Главная</button>
+                    <button class="header__btn btn_category">Категории</button>   
+                    <button class="header__btn btn_score btn-active">Результат</button>                 
+                </div>
+                <button class="settings-icon"></button>
+            </div>
+            <div class="score__main">
+                <div class="score__cards-wrapper"></div>               
+            </div>
+            <div class="footer">
+                <a href="https://rs.school/js/" class="footer__rs-link"></a>
+                <a href="https://github.com/ixakina" class="footer__git-link">Maria Khaikina 2021</a>
+            </div>
+        </div>
+    </div>
+    <div class="modal modal-close-game hide">
+        <div class="modal__overlay">
+            <div class="modal__body modal-close-game__body">
+                <button class="modal__close-btn close-btn"></button>
+                <p class="modal__text modal-close-game__text">Вы действительно хотите закончить игру?</p>
+                <div class="modal__buttons">
+                    <button class="modal__button button">Выход</button>
+                    <button class="modal__button button">Да</button>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal modal-show-answer hide">
+        <div class="modal__overlay">
+            <div class="modal__body modal-show-answer__body">
+                <div class="modal-show-answer__image">
+                    <img src="assets/images/background-1-screen.png" alt="">
+                    <div class="modal-show-answer__indicator">
+                    </div>                    
+                </div>
+                <p class="modal__text modal-show-answer__imageName"></p>
+                <span class="modal-show-answer__imageInfo"></span>                           
+                <button class="button modal__button modal-show-answer__button">Дальше</button>     
+            </div>
+        </div>
+    </div>
+    <div class="modal modal-game-over hide">
+        <div class="modal__overlay">
+            <div class="modal__body modal-game-over__body">
+                <p class="modal__text modal-game-over__text">Поздравляем!</p>
+                <span class="modal-game-over__score">8/10</span>
+                <div class="modal__buttons">
+                    <button class="modal__button button next-btn">Главная</button>
+                    <button class="modal__button button home-btn">Дальше</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="index.mjs" type="module"></script> 
+</body>
+</html>

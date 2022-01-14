@@ -1,0 +1,67 @@
+.score {
+  &__cards-wrapper {
+    max-width: calc(195px * 5 + 120px);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+  }
+
+  &__card {
+    position: relative;
+    border-radius: 20px;
+    height: 206px;
+    width: 100%;
+    overflow: hidden;
+    filter: grayscale(100%);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.card {
+  &__info {
+    position: absolute;
+    padding: 20px;
+    top: 100%;
+    visibility: hidden;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $pink-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 10px;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+.card__info.show {
+  visibility: visible;
+  top: 0;
+}
+
+.info {
+  &__name {
+    @include font(
+      $size: 2.2rem,
+      $weight: 600,
+      $height: 110%,
+      $color: $black-color
+    );
+  }
+
+  &__author {
+    @include font(
+      $size: 1.4rem,
+      $height: 1.8rem,
+      $color: $black-color,
+      $style: italic
+    );
+  }
+}

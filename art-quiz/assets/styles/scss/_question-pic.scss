@@ -1,0 +1,51 @@
+.question-pic {
+  height: 100%;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__main {
+    justify-content: flex-start;
+    gap: 30px;
+  }
+
+  &__pictures {
+    align-self: center;
+    display: flex;
+  }
+}
+
+.pictures {
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+  }
+
+  &__item {
+    cursor: pointer;
+    flex: 0 1 48%;
+    border-radius: 20px;
+    overflow: hidden;
+    max-height: 35vh;
+
+    @media (max-width: 768px) {
+      flex: 0 1 47%;
+    }
+
+    @media (max-width: 500px) {
+      flex: 0 1 46%;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}

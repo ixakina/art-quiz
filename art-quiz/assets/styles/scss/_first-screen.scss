@@ -1,0 +1,75 @@
+.first-screen {
+  background: url(../../icons/logo.png) 50% 40% / auto auto no-repeat,
+    url(../../images/background-1-screen.png) 50% 0 / 70% auto no-repeat;
+  padding-top: 20px;
+  height: 100%;
+
+  @media (max-width: 768px) {
+    background: url(../../icons/logo.png) 50% 40% / 322px 120px no-repeat,
+      url(../../images/background-1-screen.png) 50% 0 / auto auto no-repeat;
+  }
+
+  @media (max-width: 520px) {
+    background: url(../../icons/logo.png) 50% 60% / 166px 62px no-repeat,
+      url(../../images/background-1-screen.png) 50% 0 / cover no-repeat;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: end;
+  }
+
+  &__buttons {
+    flex: 1 1 auto;
+    padding: 60vh 0 0 0;
+  }
+
+  &_button {
+    width: 287px;
+
+    @media (max-width: 520px) {
+      width: 268px;
+    }
+  }
+}
+
+.battons__wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+}
+
+.footer {
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 0 1 auto;
+
+  @media (max-width: 520px) {
+    padding: 10px 0;
+  }
+
+  &__rs-link {
+    height: 31px;
+    width: 85px;
+    background: url(../../icons/rs_school.svg) center/ cover no-repeat;
+  }
+
+  &__git-link {
+    @include font($size: 1.6rem);
+  }
+}

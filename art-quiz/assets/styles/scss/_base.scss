@@ -1,0 +1,116 @@
+.button {
+  border: 1.5px solid #ffffff;
+  border-radius: 60px;
+  height: 62px !important;
+  background: transparent;
+  @include font($size: 2.2rem, $color: $light-color);
+  transition: all 0.3s ease-in-out;
+
+  @media (max-width: 768px) {
+    height: 56px;
+  }
+
+  @media (max-width: 360px) {
+    @include font($size: 1.6rem);
+  }
+
+  &:hover {
+    background: $light-color;
+    color: $black-color;
+  }
+
+  &:active {
+    background: $pink-color;
+    color: $black-color;
+  }
+}
+
+.settings-icon {
+  width: 70px;
+  height: 70px;
+  background: url('../../icons/settings.svg') center / cover no-repeat;
+  transition: all 0.3s ease-in-out;
+
+  @media (max-width: 768px) {
+    width: 40px;
+    height: 40px;
+  }
+
+  @media (max-width: 520px) {
+    width: 34px;
+    height: 34px;
+  }
+
+  &:hover {
+    transform: rotate(30deg);
+  }
+
+  &:active {
+    transform: rotate(30deg);
+  }
+}
+
+.close-btn {
+  width: 36px;
+  height: 36px;
+  background: url('../../icons/close-btn.svg') center / cover no-repeat;
+}
+
+.modal {
+  &__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(1, 1, 1, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__body {
+    padding: 30px;
+    background: $light-color;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+  }
+
+  &__close-btn {
+    filter: invert(0%) sepia(0%) saturate(7489%) hue-rotate(168deg)
+      brightness(38%) contrast(99%);
+    align-self: flex-end;
+  }
+
+  &__text {
+    @include font($size: 3.2rem, $height: 3.6rem, $color: $black-color);
+    text-align: center;
+    align-self: center;
+
+    @media (max-width: 600px) {
+      @include font($size: 2.2rem, $height: 2.8rem, $color: $black-color);
+      // width: 340px;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__button {
+    @include font($size: 2.2rem, $color: $black-color);
+    border: 1px solid $black-color;
+    flex: 47%;
+
+    @media (max-width: 600px) {
+      @include font($size: 1.6rem, $color: $black-color);
+    }
+
+    &:hover {
+      background: $pink-color;
+      border: 1px solid $pink-color;
+    }
+  }
+}

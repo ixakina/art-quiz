@@ -1,0 +1,116 @@
+.question-card {
+  height: 100%;
+  padding-top: 30px;
+
+  &__wrapper {
+    height: 100%;
+    width: 865px;
+    margin: 0 auto;
+
+    @media (max-width: 865px) {
+      width: 705px;
+    }
+
+    @media (max-width: 705px) {
+      width: 100%;
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  &__main {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+  }
+
+  &__question {
+    @include font($size: 2.8rem, $weight: 700, $height: 150%);
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 600px) {
+      @include font($size: 1.8rem, $weight: 700);
+    }
+  }
+
+  &__pic {
+    height: 500px;
+    overflow: hidden;
+    border-radius: 20px;
+
+    @media (max-width: 768px) {
+      height: 550px;
+    }
+
+    @media (max-width: 500px) {
+      height: 60%;
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}
+
+.question-artist {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__pagination {
+    display: flex;
+    gap: 20px;
+    align-self: center;
+    justify-content: center;
+
+    @media (max-width: 500px) {
+      gap: 10px;
+    }
+  }
+
+  &__answers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+  }
+}
+
+.question {
+  &__time {
+  }
+
+  &__text {
+  }
+}
+
+.pagination {
+  &__dot {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: grey;
+  }
+}
+
+.answers {
+  &__button {
+    flex: 0 1 48%;
+    @include font($size: 1.6rem);
+
+    @media (max-width: 400px) {
+      flex: 0 1 100%;
+    }
+  }
+}

@@ -1,0 +1,121 @@
+.modal-close-game {
+  &__body {
+    width: 580px;
+
+    @media (max-width: 600px) {
+      width: 340px;
+    }
+  }
+
+  &__text {
+    width: 350px;
+    margin: 50px 0;
+
+    @media (max-width: 600px) {
+      // width: 340px;
+      margin: 25px 0;
+      width: 250px;
+    }
+  }
+}
+
+.modal-show-answer {
+  &__body {
+    width: 522px;
+
+    @media (max-width: 768px) {
+      width: 350px;
+    }
+  }
+
+  &__image {
+    position: relative;
+    height: 416px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 40px;
+
+    @media (max-width: 768px) {
+      height: 250px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__indicator {
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+    width: 60px;
+    height: 60px;
+    // background: url('../../icons/true-answer.svg') center / cover no-repeat;
+  }
+
+  &__imageName {
+    margin-bottom: 10px;
+
+    @media (max-width: 768px) {
+      @include font($size: 2.2rem, $color: $black-color);
+    }
+  }
+
+  &__imageInfo {
+    margin-bottom: 36px;
+    @include font($size: 2.2rem, $color: $black-color, $style: italic);
+    align-self: center;
+
+    @media (max-width: 768px) {
+      @include font($size: 1.8rem, $color: $black-color, $style: italic);
+    }
+  }
+
+  &__button {
+    width: 90%;
+    align-self: center;
+    padding: 18px 0;
+
+    @media (max-width: 768px) {
+      padding: 14px 0;
+    }
+  }
+}
+
+.modal-game-over {
+  &__body {
+    background-image: url('../../images/game-over-bg.png');
+    background-size: auto auto;
+    background-position: center 30px;
+    background-repeat: no-repeat;
+    height: 600px;
+    width: 522px;
+
+    @media (max-width: 768px) {
+      width: 350px;
+      height: 500px;
+    }
+  }
+
+  &__text {
+    margin-top: 200px;
+    margin-bottom: 40px;
+
+    @media (max-width: 768px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__score {
+    align-self: center;
+    @include font($size: 8.2rem, $color: $black-color, $height: 10.2rem);
+    margin-bottom: 60px;
+
+    @media (max-width: 768px) {
+      margin-bottom: 20px;
+    }
+  }
+}
